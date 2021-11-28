@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BTrader.Domain.EventCategory">
+    <Position X="16.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BTrader.Domain.Event">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAEAAAAAgAAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Event.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Category" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Markets" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BTrader.Domain.OutcomeChange">
+    <Position X="5.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAEAgAAAAAAAAACAAAAAAAAAAIAAAAAIAAAAAA=</HashCode>
+      <FileName>OutcomeUpdate.cs</FileName>
+      <NewMemberFileName>Outcome.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BTrader.Domain.OrderBook">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAIAAAAAA=</HashCode>
+      <FileName>OrderBook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BTrader.Domain.Order">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAQAAgAAAAAAAAAAAAACCAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Side" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BTrader.Domain.PriceSizeChange">
+    <Position X="1.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAEAAAAEAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>PriceSizeUpdate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BTrader.Domain.MarketChange">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAACAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>MarketChange.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BTrader.Domain.Market">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAgAAAAAAAQAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Market.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+      <Property Name="Changes" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Outcomes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BTrader.Domain.Outcome">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAEAAAAAAgAAAAAAAQAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Outcome.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+      <Property Name="OrderBook" />
+      <Property Name="Changes" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Orders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BTrader.Domain.OrderRequest">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAgAAAAAAAAEAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>OrderRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="System.IObservable&lt;T&gt;" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="BTrader.Domain.ISession">
+    <Position X="16.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAQAEIAIAAAAAAAAgAIAAAAAAAAAAAAAQIABACAA=</HashCode>
+      <FileName>ISession.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Interface>
+  <Enum Name="BTrader.Domain.OrderSide">
+    <Position X="12.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrderSide.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BTrader.Domain.OrderStatus">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAIAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BTrader.Domain.OutcomeStatus">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAEAAAACAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>OutcomeStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BTrader.Domain.MarketStatus">
+    <Position X="11.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>MarketStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BTrader.Domain.SessionStatus">
+    <Position X="19" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>SessionStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
